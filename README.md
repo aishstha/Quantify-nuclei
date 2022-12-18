@@ -1,4 +1,4 @@
-# Python Image Segmentation Project
+# Project
 
 A project to identifying and quantifying the possibility of DNA damage
 
