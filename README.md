@@ -1,8 +1,6 @@
-# Project
+# Quantify nuclei (cells)
 
-A project to identifying and quantifying the possibility of DNA damage
-
-# Quantifying cells
+A project to identifying and quantifying the DNA damage cell
 
 ## Usage
 
