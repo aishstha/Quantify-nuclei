@@ -22,11 +22,6 @@ img.shape
 cells=img[:,:, 0]  
 cells.shape
 
-# or we can also do this:
-# This makes image with two channel, previously it was 3 channel
-# gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-# gray_img.shape
-
 #Threshold image to binary using OTSU. ALl thresholded pixels will be set to 255
 ret1, thresh = cv2.threshold(cells, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 thresh.shape
@@ -82,11 +77,10 @@ print(df.head())
 df['area_sq_microns'] = df['area'] * (pixels_to_um**2)
 df['equivalent_diameter_microns'] = df['equivalent_diameter'] * (pixels_to_um)
 print(df.head())
-df.to_excel('data_to_excel2.xlsx', sheet_name='measurements')
+df.to_excel('data_to_excel.xlsx', sheet_name='measurements')
 # End : Find the stats
 
 # Start : Label the image
-
 #thresholding a color image, here keeping only the yellow in the image
 th=cv2.inRange(img,(0,255,255),(0,255,255)).astype(np.uint8)
 
@@ -117,6 +111,5 @@ for label in labels:
     cv2.putText(img, f"{label}", (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.35, color, 1, cv2.LINE_AA)
 
 cv2.imwrite("output.jpg", img)
-
 # End : Label the image
 
