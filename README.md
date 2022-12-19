@@ -16,4 +16,4 @@ $ ./segment_script.py  "Data/IXMtest_C05_s7_w1F71963FB-8F29-41CB-A5F5-07CB9584BB
 
 ## Output
 
-Check `data_to_excel.xlsx` file for quantified result and `output.jpg` for visual result.
+Check `data_to_excel.xlsx` file for result and `output.jpg` for visual result.
