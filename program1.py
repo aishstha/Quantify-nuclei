@@ -62,7 +62,8 @@ markers = cv2.watershed(img,markers)
 
 # color boundaries in yellow. 
 img[markers == -1] = [0,255,255]  
-plt.imshow(img)
+img2 = color.label2rgb(markers, bg_label=0)
+plt.imshow(img2)
 
 #thresholding a color image, here keeping only the yellow in the image
 th=cv2.inRange(img,(0,255,255),(0,255,255)).astype(np.uint8)

@@ -32,13 +32,11 @@ ret1, thresh = cv2.threshold(cells, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 thresh.shape
 plt.imshow(thresh)
 
-# Morphological operations to remove small noise - opening
+# Morphological operations to remove small noise - Using Erosion and Dilation
 kernel = np.ones((3,3),np.uint8)
 opening = cv2.morphologyEx(thresh,cv2.MORPH_OPEN,kernel, iterations = 5)
-
 # Remove the cell touching the edges
 opening = segmentation.clear_border(opening)
-
 # Find sure background
 sure_bg = cv2.dilate(opening,kernel,iterations=10)
 
@@ -72,6 +70,7 @@ plt.imshow(img)
 img2 = color.label2rgb(markers, bg_label=0)
 plt.imshow(img2)
 
+# Start : Find the stats 
 pixels_to_um=0.454
 props = measure.regionprops_table(markers, cells,
 properties=['label', 'area', 'equivalent_diameter', 'mean_intensity', 'solidity', 'orientation', 'perimeter'])
@@ -84,3 +83,40 @@ df['area_sq_microns'] = df['area'] * (pixels_to_um**2)
 df['equivalent_diameter_microns'] = df['equivalent_diameter'] * (pixels_to_um)
 print(df.head())
 df.to_excel('data_to_excel2.xlsx', sheet_name='measurements')
+# End : Find the stats
+
+# Start : Label the image
+
+#thresholding a color image, here keeping only the yellow in the image
+th=cv2.inRange(img,(0,255,255),(0,255,255)).astype(np.uint8)
+
+#inverting the image so components become 255 seperated by 0 borders.
+th=cv2.bitwise_not(th)
+
+#calling connectedComponentswithStats to get the size of each component
+nb_comp,output,sizes,centroids=cv2.connectedComponentsWithStats(th,connectivity=4)
+
+#taking away the background
+nb_comp-=1; sizes=sizes[0:,-1]; centroids=centroids[1:,:]
+bins = list(range(np.amax(sizes)))
+
+#plot distribution of your cell sizes.
+numbers = sorted(sizes)
+
+plt.hist(sizes,numbers)
+cv2.imwrite("image_with_boder.jpg", img)
+
+labels = np.unique(markers)
+for label in labels:
+    y, x = np.nonzero(markers == label)
+    cx = int(np.mean(x))
+    cy = int(np.mean(y))
+    color = (255, 255, 255)
+    img[markers == label] = np.random.randint(0, 255, size=3)
+    cv2.circle(img, (cx, cy), 2, color=color, thickness=-1)
+    cv2.putText(img, f"{label}", (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.35, color, 1, cv2.LINE_AA)
+
+cv2.imwrite("output.jpg", img)
+
+# End : Label the image
+
