@@ -6,7 +6,6 @@ import pandas as pd
 import sys
 
 arg = sys.argv[1]
-print("argument", arg)
 
 img = cv2.imread(arg) #  "Data/CD36P-231-6-DAPI.tif"
 
@@ -64,9 +63,7 @@ markers = cv2.watershed(img,markers)
 # color boundaries in yellow. 
 img[markers == -1] = [0,255,255]  
 plt.imshow(img)
-# cv2.imwrite("image_actual12ww.jpg", img)
 
-# NEW
 #thresholding a color image, here keeping only the yellow in the image
 th=cv2.inRange(img,(0,255,255),(0,255,255)).astype(np.uint8)
 
