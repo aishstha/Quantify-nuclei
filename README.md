@@ -49,12 +49,11 @@ $ conda env create -f environment.yml
 $ conda env list
 
 ```
-![me]([https://github.com/samadpls](https://github.com/aishstha/Quantify-nuclei/blob/main/SampleResult/input.png))
-![Input](SampleResult/input.png | width=100)
 
-| ![Kiku](SampleResult/input.png)        | ![Kiku](SampleResult/input.png) |
+
+| Input        | Output |
 | --------------------------------------- | --------------------------------------- |
-| ![Kiku](SampleResult/input.png) |                                         |
+| ![Kiku](SampleResult/input.png) | ![Kiku](SampleResult/output.png) |
 
 ## Output
 
