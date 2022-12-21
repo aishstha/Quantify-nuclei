@@ -1,6 +1,7 @@
-# Quantify nuclei (cells)
+# Quantify nuclei 
 
-A project to identifying and quantifying the DNA damage cell
+- This project would aid the researchers in evaluating the DNA damage of cells under stress.
+- Helps to dentifying and quantifying the nuclei (cell)
     
 ## Prerequisites
 
