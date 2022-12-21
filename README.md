@@ -53,7 +53,7 @@ $ conda env list
 
 | Input                                   | Output                                  |
 | --------------------------------------- | --------------------------------------- |
-| ![Input](SampleResult/input.png)         | ![Output](SampleResult/output.png)         |
+| ![Input](SampleResult/input.png)        | ![Output](SampleResult/output.jpg)      |
 
 ## Output
 
