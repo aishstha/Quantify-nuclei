@@ -17,13 +17,7 @@ Clone the repository, install the dependencies and get started right away.
     $ cd Quantify-nuclei
     $ ./segment_script.py <Input-image-file-path> 
     
-    
-    Example : 
-    
-      ```bash
-      ./segment_script.py  "Data/IXMtest_C05_s7_w1F71963FB-8F29-41CB-A5F5-07CB9584BBC5.tif"
-
-      ```
+hello
 ## Usage
 
 1: You can manually Install packages mentioned above (cv2, numpy, matplotlib, pandas, sys, skimage)
