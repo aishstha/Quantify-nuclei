@@ -50,7 +50,7 @@ $ conda env list
 
 ```
 ![me]([https://github.com/samadpls](https://github.com/aishstha/Quantify-nuclei/blob/main/SampleResult/input.png))
-![Screenshot](SampleResult/input.png =250x250)
+![](SampleResult/input.png =250x250)
 
 ## Output
 
