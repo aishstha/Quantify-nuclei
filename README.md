@@ -25,13 +25,30 @@ $ ./segment_script.py  "Data/IXMtest_C05_s7_w1F71963FB-8F29-41CB-A5F5-07CB9584BB
  
 ## Usage
 
-1: You can manually Install packages mentioned above (cv2, numpy, matplotlib, pandas, sys, skimage)
-OR 
-2: Use the conda environment file for this project. 
-    $ Check `environment.yml` 
-    
-## Creating an environment from an environment.yml file (Conda Environment)
+You can manually Install packages mentioned above (cv2, numpy, matplotlib, pandas, sys, skimage).
 
+OR 
+
+Use the conda environment file of this project. For more information, check `environment.yml` 
+    
+### Conda Environment 
+
+Use the terminal or an Anaconda Prompt for the following steps:
+
+1. Create the environment from the environment.yml file:
+
+```bash
+$ conda env create -f environment.yml
+
+```
+2. Activate the new environment: `conda activate segmentation`
+
+3. Verify that the new environment was installed correctly:
+
+```bash
+$ conda env list
+
+```
 
 
 ## Output
