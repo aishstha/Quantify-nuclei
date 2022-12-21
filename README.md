@@ -1,7 +1,6 @@
 # Quantify nuclei 
 
-- This project would aid the researchers in evaluating the DNA damage of cells under stress.
-- Helps to dentifying and quantifying the nuclei (cell)
+This project would aid the researchers in evaluating the DNA damage of cells under stress. Helps to dentifying and quantifying the nuclei (cell).
     
 ## Prerequisites
 
