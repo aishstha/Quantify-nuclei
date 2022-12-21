@@ -16,6 +16,8 @@ Clone the repository, install the dependencies and get started right away.
     $ git clone git@github.com:aishstha/Quantify-nuclei.git
     $ cd Quantify-nuclei
     $ ./segment_script.py <Input-image-file-path> 
+    
+    
     Example : 
     
       ```bash
