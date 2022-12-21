@@ -51,7 +51,7 @@ $ conda env list
 ```
 
 
-| ![Kiku](SampleResult/input.png)         | ![Kiku](SampleResult/input.png)         |
+| Input                                   | Output                                  |
 | --------------------------------------- | --------------------------------------- |
 | ![Kiku](SampleResult/input.png)         | ![Kiku](SampleResult/input.png)         |
 
