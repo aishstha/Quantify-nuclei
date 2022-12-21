@@ -50,11 +50,11 @@ $ conda env list
 
 ```
 
+## Output
+
+Check `data_to_excel.xlsx` file for stats and `output.jpg` for visual result. The output.jpg file has the labeling in the cells, the information about each cell is according to the label in excel file. 
+
 
 | Input                                   | Output                                  |
 | --------------------------------------- | --------------------------------------- |
 | ![Input](SampleResult/input.png)        | ![Output](SampleResult/output.jpg)      |
-
-## Output
-
-Check `data_to_excel.xlsx` file for stats and `output.jpg` for visual result. The output.jpg file has the labeling in the cells, the information about each cell is according to the label in excel file. 
